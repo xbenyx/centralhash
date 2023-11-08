@@ -8,7 +8,7 @@
 
 **Project Description:**
 
-CentralHash is a cutting-edge open-source software project designed to revolutionize the way hashes are managed and centralized. With a focus on security, efficiency, and scalability, CentralHash empowers organizations to streamline and optimize their hash management processes, making it an indispensable tool for data integrity and cybersecurity.
+CentralHash is a cutting-edge open-source software project designed to revolutionize the way hashes are managed and centralized. With a focus on security, efficiency, and scalability, CentralHash empowers organizations to streamline and optimize their hash management processes, making it an indispensable tool for cybersecurity.
 
 **Key Features:**
 
