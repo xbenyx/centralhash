@@ -49,6 +49,7 @@ export abstract class AbstractRepository<TDocument extends AbstractDocument> {
    return this.model.findOneAndDelete(filterQuery).lean<TDocument>(true);
   }
 
+}
+}
 
-}
-}
+
