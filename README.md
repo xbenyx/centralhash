@@ -31,7 +31,7 @@ To get started with CentralHash, simply follow our installation guide and docume
 $ pnpm install
 ```
 
-## Running the app
+## Basic Runninf commands
 
 ```bash
 # development
