@@ -23,7 +23,7 @@ Central Hash is a cutting-edge open-source software project designed to revoluti
 
 **Getting Started:**
 
-To get started with CentralHash, simply follow our installation guide and documentation. You can find the latest release and documentation on our GitHub repository.
+To get started with CentralHash, simply follow our installation guide and documentation. You can find the latest release and documentation on our GitHub repository...
 
 ## Installation
 
