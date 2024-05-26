@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+sqlalchemy
+sqlalchemy[asyncio]
+sqlalchemy[mysql]
+alembic
+python-dotenv
+pydantic-settings
+mysql-connector-python
+prometheus_client
+starlette_exporter
+Jinja2
+flake8

@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "${PORT}:${PORT}"
+    command: uvicorn app.main:app --host ${HOST} --port ${PORT}
+    depends_on:
+      - prometheus
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "${PROMETHEUS_PORT}:${PROMETHEUS_PORT}"
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "${GRAFANA_PORT}:${GRAFANA_PORT}"
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  db_data:
+  grafana_data:
