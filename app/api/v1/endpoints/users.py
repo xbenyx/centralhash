@@ -5,9 +5,9 @@ from . import endpoints
 router = APIRouter()
 
 @router.get(endpoints.NOTIFICATIONS)
-async def read_access():
+async def read_all_access():
     return {"message": "Notifications endpoint"}
 
 @router.get(endpoints.USERS)
-async def read_access():
+async def read_all_users():
     return {"message": "Users endpoint"}

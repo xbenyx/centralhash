@@ -1,14 +1,53 @@
-# compiled output
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Logs
-logs
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Ignore environment variables file
+.env
+
+# Ignore logs
 *.log
 
-# OS
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
 
-# Tests
+# Ignore other common files and directories
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
+dist/
+build/
 
-# IDEs and editors
+# Ignore coverage reports
+htmlcov/
+.coverage
+.coverage.*
 
-# IDE - VSCode
+# Ignore mypy and other type checker outputs
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Ignore test reports
+.coverage
+.tox/
+.nox/
+
+# Ignore pyenv
+.python-version
+
+# Ignore editor-specific files
+*.iml
 
