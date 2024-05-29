@@ -1,8 +1,12 @@
 # app/api/v1/router.py
 from fastapi import APIRouter
 from app.api.v1.endpoints import access, agents, auth, configuration, files, hashlists, tasks, users
+from app.core.exceptions.handlers import user_not_found_exception_handler, database_exception_handler
+from app.core.exceptions.exceptions import UserNotFoundException, DatabaseException
 
 api_router = APIRouter()
+
+# Routes
 api_router.include_router(access.router, prefix="/access", tags=["access"])
 api_router.include_router(agents.router, prefix="/agents", tags=["agents"])
 api_router.include_router(auth.router, prefix="/auth", tags=["auth"])

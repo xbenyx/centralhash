@@ -1,6 +1,9 @@
 from sqlalchemy import create_engine, exc
 from sqlalchemy.ext.asyncio import create_async_engine
+from sqlalchemy.orm import declarative_base, sessionmaker
 from app.core.config import settings
+
+Base = declarative_base()
 
 def create_database_engine():
     """
@@ -45,3 +48,19 @@ def create_async_database_engine():
             raise ValueError(f"Failed to connect to the database: {e}")
     else:
         raise ValueError("Unsupported database type. Use 0 for MySQL, 1 for MSSQL, or 2 for PostgreSQL.")
+
+# Define the engine variable
+engine = create_database_engine()
+
+# Create a session factory
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+def get_db():
+    """
+    Dependency to get a database session.
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

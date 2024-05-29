@@ -51,10 +51,6 @@ central_hash_api/
 │   ├── errors/
 │   │   ├── __init__.py
 │   │   ├── handlers.py
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── user.py
-│   │   ├── post.py
 │   ├── schemas/
 │   │   ├── __init__.py
 │   │   ├── user.py
@@ -67,6 +63,9 @@ central_hash_api/
 │   │   ├── __init__.py
 │   │   ├── v1/
 │   │       ├── __init__.py
+│   │       ├── models/
+│   │           ├── __init__.py
+│   │           ├── user.py
 │   │       ├── endpoints/
 │   │           ├── __init__.py
 │   │           ├── access.py

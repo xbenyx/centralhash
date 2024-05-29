@@ -12,7 +12,10 @@ from app.core.database import create_database_engine
 from app.core.config import settings
 from database.initialize_db import load_schema
 from app.api.v1.endpoints.router import api_router
-from app.errors.handlers import http_exception_handler, validation_exception_handler
+from app.core.errors.handlers import http_exception_handler, validation_exception_handler
+from app.core.exceptions.handlers import user_not_found_exception_handler, database_exception_handler
+from app.core.exceptions.exceptions import UserNotFoundException, DatabaseException
+
 
 def create_app():
     app = FastAPI(
@@ -63,6 +66,10 @@ def create_app():
 
     # Include API router
     app.include_router(api_router, prefix="/api/v1")
+
+    # Include Exceptionshandlers
+    app.add_exception_handler(UserNotFoundException, user_not_found_exception_handler)
+    app.add_exception_handler(DatabaseException, database_exception_handler)
 
     return app
 
