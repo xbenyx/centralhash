@@ -17,7 +17,6 @@ CRACKER_TYPES = "/crackertypes"
 HASH_TYPES = "/hashtypes"
 HEALTH_CHECKS = "/healthchecks"
 HEALTH_CHECK_AGENTS = "/healthcheckagents"
-LOG_ENTRIES = "/logentries"
 PRE_PROCESSORS = "/preprocessors"
 # Files
 FILES = "/files"
@@ -35,3 +34,5 @@ TASKWRAPPERS = "/taskwrappers"
 # Users
 NOTIFICATIONS = "/notifications"
 USERS = "/users"
+# Logs
+LOGS = "/logs"

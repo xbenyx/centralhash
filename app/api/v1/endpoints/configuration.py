@@ -32,10 +32,6 @@ async def read_health_checks():
 async def read_health_check_agents():
     return {"message": "Health Checks Agents endpoint"}
 
-@router.get(endpoints.LOG_ENTRIES)
-async def read_log_entries():
-    return {"message": "Log Entries endpoint"}
-
 @router.get(endpoints.PRE_PROCESSORS)
 async def read_pre_processors():
     return {"message": "Preprocessors endpoint"}
